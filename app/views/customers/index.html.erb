@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+        <h2> HOME! </h2>
+    </div>
+  </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <h3>Sign up!</h3>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <%= form_for Customer.new do |f| %>
+                <%= f.label :fname, value="First Name"%>
+                <%= f.text_field :fname %>
+                </br/>
+                <%= f.label :lname, value="Last Name"%>
+                <%= f.text_field :lname %>
+                </br/>
+                <%= f.label :email, value="Email"%>
+                <%= f.text_field :email %>
+                </br/>
+                <%= f.label :password, value="Password"%>
+                <%= f.text_field :password %>
+                </br/>
+                <%= f.submit %>
+            <% end %>
+        </div>
+    </div>
+</div>
+
+        <h3> OOOOooooor sign IN!</h3>
+
+        <%=form_tag "/sessions" do %>
+	       <%=label_tag (:email)%>
+	       <%=text_field_tag (:email)%>
+           </br/>
+           <%=label_tag (:password)%>
+	       <%=text_field_tag (:password)%>
+           </br/>
+           <%=submit_tag ("Log In")%>
+        <% end %>

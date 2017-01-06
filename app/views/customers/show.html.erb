@@ -1,0 +1,23 @@
+<h2>Hello, <%= @customer.fname %>!</h2>
+
+<h3>Your cart has <%= @cart.products.length %> items:</h3>
+<% @category = ["abstract", "city", "people", "transport", "animals", "food", "nature", "business", "nightlife", "sports", "cats", "fashion", "technics"]%>
+<% @cart.products.each do |product| %>
+	<h4><%=product.name%></h4>
+	<h5><%=product.price%></h5>
+	<img src= <%= Faker::LoremPixel.image("50x60", false, @category.first) %>>
+	<%@category.shift %>
+<% end %>
+
+
+
+<h3>Your wishlist has <%= @wishlist.products.length%> items:</h3>
+<% @wishlist.products.each do |product| %>
+	<h4><%=product.name%></h4>
+	<h5><%=product.price%></h5>
+<% end %>
+
+<%=form_tag "/sessions/destroy" do %>
+	      
+           <%=submit_tag ("Log Out")%>
+        <% end %>
