@@ -10,5 +10,9 @@ get '/customers/:id', to: 'customers#show'
 
 post '/sessions/destroy'
 
+post '/products/add_to_cart'
+
+post '/products/add_to_wishlist'
+
 
 end
