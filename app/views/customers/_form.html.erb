@@ -1,0 +1,24 @@
+<div class="col-sm-4 col-sm-offset-4 box-container">
+    <h3>Sign up!</h3>
+    <%= form_for Customer.new do |f| %>
+        <% if @customer.errors.any? %>
+              <% @customer.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+         <% end %>
+    <% end %>
+        <%= f.label :fname, value="First Name"%>
+        <%= f.text_field :fname %>
+        </br/>
+        <%= f.label :lname, value="Last Name"%>
+        <%= f.text_field :lname %>
+        </br/>
+        <%= f.label :email, value="Email"%>
+        <%= f.text_field :email %>
+        </br/>
+        <%= f.label :password, value="Password"%>
+        <%= f.text_field :password %>
+        </br/>
+        <%= f.submit %>
+    <% end %>
+</div>
+    

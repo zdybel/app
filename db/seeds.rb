@@ -18,3 +18,5 @@ Product.create(name: product_name, category: category, price: price)
 
 end
 
+
+
