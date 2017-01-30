@@ -7,7 +7,7 @@ root 'customers#index'
 
 resources  :customers, :products, :wishlists, :carts, :sessions
 
-
+ 
 
 get '/customers/:id', to: 'customers#show'
 

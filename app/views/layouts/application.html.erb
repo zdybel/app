@@ -21,11 +21,15 @@
   <body>
     <div class="hero-image">
       <div class="container-fluid body-container">
-       <div class="row">
-         <div class="col-sm-4 col-sm-offset-4 text-center">
-           <h1> layout!</h1>
-         </div>
-        </div>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-fluid">
+            <div class= "navbar-left">
+              <h1> Brynne's Market </h1>
+            </div>
+              <button type="button" class="navbar-btn btn navbar-right"> Button </button>
+            
+          </div>
+        </nav>
         <% flash.each do |name, msg| -%>
           <%= content_tag :div, msg, class: name %>
         <% end -%>
